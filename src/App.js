@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import './App.css';
+import ReactApp from './react';
+import ReactTrackedApp from './react-tracked';
+
+const App = () => (
+    <Router>
+        <Switch>
+            <Route path="/vanilla-react">
+                <ReactApp />
+            </Route>
+            <Route path="/react-tracked">
+                <ReactTrackedApp />
+            </Route>
+            <Route path="/">
+                <ul>
+                    <li>
+                        <Link to="/react">
+                            React (useReducer + Context) example
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/react-tracked">React Tracked example</Link>
+                    </li>
+                </ul>
+            </Route>
+        </Switch>
+    </Router>
+);
 
 export default App;
