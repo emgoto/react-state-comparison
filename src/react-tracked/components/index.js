@@ -1,21 +1,21 @@
 import React from 'react';
 
-import { mockTasks } from '../../common/mocks';
-import { TasksProvider } from '../state';
+import { initialState } from '../../common/mocks';
+import { TasksProvider } from '../state/store';
 
+import Name from './name';
 import Tasks from './tasks';
 import CreateTask from './create-task';
 
-const ReactTrackedApp = () => {
-    // This would be replaced with a fetch call to grab the real data
-    const initialTasks = mockTasks;
-
-    return (
-        <TasksProvider initialTasks={initialTasks}>
-            <Tasks tasks={initialTasks} />
+const ReactTrackedApp = () => (
+    <>
+        <h2>React Tracked</h2>
+        <TasksProvider initialState={initialState}>
+            <Name />
+            <Tasks />
             <CreateTask />
         </TasksProvider>
-    );
-};
+    </>
+);
 
 export default ReactTrackedApp;

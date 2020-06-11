@@ -1,30 +1,14 @@
-/* eslint-disable no-restricted-globals */
-import React, { useState, useContext } from 'react';
-
-import { TasksContext } from '../../state';
+import React, { useContext } from 'react';
+import CreateTaskView from '../../../common/components/create-task';
+import { TasksContext } from '../../state/store';
 
 const CreateTask = () => {
     const { dispatch } = useContext(TasksContext);
-    const [name, setName] = useState('');
 
-    const onClick = () => {
-        // In a real-life app, we would call an endpoint to create a task,
-        // and use the ID value returned to us in the response to save it in state.
-        // Here we will be hardcoding it.
-        dispatch({ type: 'createTask', payload: { id: 4, name } });
-        setName('');
-    };
+    const onCreate = (id, name) =>
+        dispatch({ type: 'createTask', payload: { id, name } });
 
-    return (
-        <div>
-            <input
-                type="text"
-                value={name}
-                onChange={() => setName(event.target.value)}
-            />
-            <button onClick={onClick}>Create task</button>
-        </div>
-    );
+    return <CreateTaskView onCreate={onCreate} />;
 };
 
 export default CreateTask;

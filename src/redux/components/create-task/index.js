@@ -1,12 +1,12 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import CreateTaskView from '../../../common/components/create-task';
-import { useUpdate } from '../../state/store';
 
 const CreateTask = () => {
-    const dispatch = useUpdate();
+    const dispatch = useDispatch();
 
     const onCreate = (id, name) =>
-        dispatch({ type: 'createTask', payload: { id, name } });
+        dispatch({ type: 'CREATE_TASK', payload: { id, name } });
 
     return <CreateTaskView onCreate={onCreate} />;
 };

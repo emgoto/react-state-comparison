@@ -1,8 +1,17 @@
 # react-state-comparison 🕵️‍♀️
 
-🚧 currently in-progress 🚧 
+This repository contains to-do list examples for different state management libraries.
 
-This repository will contain to-do list examples for different state management libraries.
+Current:
+
+* React (with useReducer and Context)
+* React Tracked
+* Redux
+
+Coming soon:
+* Mobx
+* react-sweet-state
+* Recoil
 
 ## Available Scripts
 

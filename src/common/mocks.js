@@ -1,4 +1,4 @@
-export const mockTasks = {
+const initialTasks = {
     '1': {
         id: '1',
         name: 'Task number one',
@@ -14,4 +14,9 @@ export const mockTasks = {
         name: 'Task number three',
         checked: false
     }
+};
+
+export const initialState = {
+    listName: 'My to-do list',
+    tasks: initialTasks
 };
