@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { initialState } from '../../common/mocks';
 import { TasksProvider } from '../state/store';
 
 import Name from './name';

@@ -22,4 +22,4 @@ const CreateTaskView = ({ onCreate }) => {
     );
 };
 
-export default CreateTask;
+export default CreateTaskView;
