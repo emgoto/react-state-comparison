@@ -1,31 +1,35 @@
 import { initialState } from '../../../common/mocks';
 
 const reducer = (state = initialState, action) => {
-    const { name, tasks } = state;
+    const { listName, tasks } = state;
     switch (action.type) {
-        case 'CREATE_TASK': {
+        case 'updateListName': {
+            const { name } = action.payload;
+            return { listName: name, tasks };
+        }
+        case 'createTask': {
             const { id, name } = action.payload;
             return {
-                name,
+                listName,
                 tasks: { ...tasks, [id]: { id, name, checked: false } }
             };
         }
-        case 'UPDATE_TASK_NAME': {
+        case 'updateTaskname': {
             const { id, name } = action.payload;
             const updatedTask = { ...tasks[id], name };
-            return { name, tasks: { ...tasks, [id]: updatedTask } };
+            return { listName, tasks: { ...tasks, [id]: updatedTask } };
         }
-        case 'UPDATE_TASK_CHECKED': {
+        case 'updateTaskChecked': {
             const { id, checked } = action.payload;
             const updatedTask = { ...tasks[id], checked };
-            return { name, tasks: { ...tasks, [id]: updatedTask } };
+            return { listName, tasks: { ...tasks, [id]: updatedTask } };
         }
 
-        case 'DELETE_TASK': {
+        case 'deleteTask': {
             const { id } = action.payload;
             const newTasks = { ...tasks };
             delete newTasks[id];
-            return { name, tasks: newTasks };
+            return { listName, tasks: newTasks };
         }
 
         default: {

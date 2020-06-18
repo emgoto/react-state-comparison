@@ -4,9 +4,10 @@ This repository contains to-do list examples for different state management libr
 
 Current:
 
-* React (with useReducer and Context)
-* React Tracked
-* Redux
+* `react` React with useReducer and Context
+* `react-tracked` Using the React Tracked library
+* `redux` Using Redux with hooks
+* `redux-advanced` Redux with connect(), combineReducers() and no hooks
 
 Coming soon:
 * Mobx

@@ -6,7 +6,7 @@ const CreateTask = () => {
     const dispatch = useDispatch();
 
     const onCreate = (id, name) =>
-        dispatch({ type: 'CREATE_TASK', payload: { id, name } });
+        dispatch({ type: 'createTask', payload: { id, name } });
 
     return <CreateTaskView onCreate={onCreate} />;
 };

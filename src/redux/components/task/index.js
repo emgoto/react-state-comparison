@@ -6,11 +6,11 @@ const Task = ({ id, name, checked }) => {
     const dispatch = useDispatch();
 
     const onSetName = (id, name) =>
-        dispatch({ type: 'UPDATE_TASK_NAME', payload: { id, name } });
+        dispatch({ type: 'updateTaskname', payload: { id, name } });
     const onSetChecked = (id, checked) =>
-        dispatch({ type: 'UPDATE_TASK_CHECKED', payload: { id, checked } });
+        dispatch({ type: 'updateTaskChecked', payload: { id, checked } });
     const onDeleteTask = (id) =>
-        dispatch({ type: 'DELETE_TASK', payload: { id } });
+        dispatch({ type: 'deleteTask', payload: { id } });
 
     return (
         <TaskView

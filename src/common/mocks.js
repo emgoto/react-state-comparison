@@ -1,4 +1,4 @@
-const initialTasks = {
+export const initialTasks = {
     '1': {
         id: '1',
         name: 'Task number one',
