@@ -7,7 +7,8 @@ Current:
 * `react` React with useReducer and Context
 * `react-tracked` Using the React Tracked library
 * `redux` Using Redux with hooks
-* `redux-advanced` Redux with connect(), combineReducers() and no hooks
+* `redux-advanced` Using Redux with connect(), combineReducers() and no hooks
+* `redux-toolkit` Using Redux Toolkit with combineReducers() and hooks
 
 Coming soon:
 * Mobx

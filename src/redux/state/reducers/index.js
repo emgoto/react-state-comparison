@@ -14,7 +14,7 @@ const reducer = (state = initialState, action) => {
                 tasks: { ...tasks, [id]: { id, name, checked: false } }
             };
         }
-        case 'updateTaskname': {
+        case 'updateTaskName': {
             const { id, name } = action.payload;
             const updatedTask = { ...tasks[id], name };
             return { listName, tasks: { ...tasks, [id]: updatedTask } };
