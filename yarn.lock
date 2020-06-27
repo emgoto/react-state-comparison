@@ -8946,6 +8946,11 @@ react-scripts@3.4.1:
   optionalDependencies:
     fsevents "2.1.2"
 
+react-sweet-state@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/react-sweet-state/-/react-sweet-state-2.3.0.tgz#d7cc6622fa5ed327aeae6e0a8be5a3a171f742db"
+  integrity sha512-uC90UZrajiNINWf/xjEVesWV/cKE0BXPRtXUY+VR3mI1+eyM54tMxTtRGoKRoftrtIrgdGVCh8WR5TNuRdT90w==
+
 react-tracked@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/react-tracked/-/react-tracked-1.4.0.tgz#0eb5bb5057e4d45864731bf1e2e5746ee5caca10"

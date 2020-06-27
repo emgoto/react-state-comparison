@@ -7,6 +7,7 @@ import ReactTrackedApp from './react-tracked';
 import ReduxApp from './redux';
 import ReduxAdvancedApp from './redux-advanced';
 import ReduxToolkitApp from './redux-toolkit';
+import ReactSweetStateApp from './react-sweet-state';
 
 const App = () => (
     <Router>
@@ -25,6 +26,9 @@ const App = () => (
             </Route>
             <Route path="/redux-toolkit">
                 <ReduxToolkitApp />
+            </Route>
+            <Route path="/react-sweet-state">
+                <ReactSweetStateApp />
             </Route>
             <Route path="/">
                 <ul>
@@ -49,6 +53,11 @@ const App = () => (
                     <li>
                         <Link to="/redux-toolkit">
                             React Redux Toolkit example
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/react-sweet-state">
+                            react-sweet-state example
                         </Link>
                     </li>
                 </ul>
