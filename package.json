@@ -17,6 +17,7 @@
     "react-scripts": "3.4.1",
     "react-sweet-state": "^2.3.0",
     "react-tracked": "^1.4.0",
+    "recoil": "^0.0.13",
     "redux": "^4.0.5"
   },
   "lint-staged": {
