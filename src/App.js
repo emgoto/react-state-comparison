@@ -9,6 +9,7 @@ import ReduxAdvancedApp from './redux-advanced';
 import ReduxToolkitApp from './redux-toolkit';
 import ReactSweetStateApp from './react-sweet-state';
 import EasyPeasy from './easy-peasy';
+import RecoilApp from './recoil';
 
 const App = () => (
     <Router>
@@ -33,6 +34,8 @@ const App = () => (
             </Route>
             <Route path="/easy-peasy">
                 <EasyPeasy />
+            <Route path="/recoil">
+                <RecoilApp />
             </Route>
             <Route path="/">
                 <ul>
@@ -66,6 +69,9 @@ const App = () => (
                     </li>
                     <li>
                         <Link to="/easy-peasy">easy-peasy example</Link>
+                    </li>
+                    <li>
+                        <Link to="/recoil">recoil example</Link>
                     </li>
                 </ul>
             </Route>
